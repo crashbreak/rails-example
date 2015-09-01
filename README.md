@@ -1,4 +1,4 @@
-# Rails heroku example for crashbreak.com
+# Rails example for crashbreak.com
 
 ## Setup
 
