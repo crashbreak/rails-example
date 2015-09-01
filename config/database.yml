@@ -14,3 +14,7 @@ test:
 production:
   <<: *default
   database: crashbreak_rails_example_production
+
+crashbreak_test:
+  <<: *default
+  database: crashbreak-test
