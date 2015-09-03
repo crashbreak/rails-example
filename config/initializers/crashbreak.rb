@@ -19,4 +19,4 @@ Crashbreak.configure do |config|
   config.request_spec_template_path = "#{Crashbreak.root}/lib/generators/crashbreak/templates/minitest_test.rb"
 end
 
-Crashbreak::PredefinedSettings.postgresql('crashbreak_rails_example_development')
+Crashbreak::PredefinedSettings.postgresql("crashbreak_rails_example_#{Rails.env}")
