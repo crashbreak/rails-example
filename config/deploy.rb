@@ -1,3 +1,6 @@
+require 'dotenv'
+Dotenv.load
+
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
@@ -34,6 +37,8 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+set :crashbreak_token, ENV['CRASHBREAK_TOKEN']
+
 namespace :deploy do
 
   after :restart, :clear_cache do
@@ -45,4 +50,5 @@ namespace :deploy do
     end
   end
 
+  after 'deploy:finished', 'crashbreak:deploy'
 end
